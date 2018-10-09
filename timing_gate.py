@@ -5,7 +5,7 @@ import time
 # We'd love to see what you make:
 # @ScienceOxford
 
-distance = 0.5      # distance in meters between sensors
+distance = 0.35      # distance in meters between sensors
 sensor_start = pin0.read_analog()
 sensor_end = pin2.read_analog()
 
