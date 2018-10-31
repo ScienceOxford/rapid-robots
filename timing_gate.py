@@ -1,5 +1,5 @@
 from microbit import *
-import time
+from time import ticks_ms
 
 # Please tag us if used!
 # We'd love to see what you make:
@@ -18,13 +18,13 @@ display.show(Image.SQUARE)
 # wait for first sensor to activate, then note time
 while sensor_start > 100:
     sensor_start = pin0.read_analog()
-start = time.ticks_ms()
+start = ticks_ms()
 display.clear()
 
 # wait for second sensor to activate, then note time
 while sensor_end > 100:
     sensor_end = pin2.read_analog()
-end = time.ticks_ms()
+end = ticks_ms()
 
 # calculate time taken in seconds & speed over given distance
 time_taken = (end - start) / 1000
