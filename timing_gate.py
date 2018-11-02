@@ -1,5 +1,6 @@
 from microbit import *
 from time import ticks_ms
+import radio
 
 # Please tag us if used!
 # We'd love to see what you make:
@@ -8,6 +9,8 @@ from time import ticks_ms
 distance = 0.35      # distance in meters between sensors
 sensor_start = pin0.read_analog()
 sensor_end = pin2.read_analog()
+
+radio.on()
 
 # start sequence
 display.show("3 2 1")
@@ -29,6 +32,8 @@ end = ticks_ms()
 # calculate time taken in seconds & speed over given distance
 time_taken = (end - start) / 1000
 speed = distance / time_taken
+
+radio.send('speed = ' + str(speed))
 
 # reset button presses to zero
 button_a.was_pressed()
