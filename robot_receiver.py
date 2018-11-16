@@ -61,5 +61,8 @@ while True:
         elif message == 'right':
             display.show(Image.ARROW_E)
             drive(500, -500)
+        elif message == 'backward':
+            display.show(Image.ARROW_S)
+            drive(-500, -500)
         elif message == 'stop':
             stop()
