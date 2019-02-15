@@ -6,7 +6,7 @@ import radio
 # @ScienceOxford
 
 radio.on()
-radio.config(channel=6)
+radio.config(channel=6)     # change this to a number between 0-82, and make your receiver match!
 
 while True:
     if button_a.is_pressed() and button_b.is_pressed():
