@@ -10,7 +10,7 @@ import radio
 # http://www.multiwingspan.co.uk/micro.php?page=botline
 
 radio.on()
-radio.config(channel=6)
+radio.config(channel=6)     # change this to a number between 0-82, and make your transmitter match!
 
 LF = pin14
 LB = pin13
